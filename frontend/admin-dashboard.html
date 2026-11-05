@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/admin.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">🍽 Admin Dashboard</div>
+
+    <div>
+        <a href="#dashboard">Dashboard</a>
+        <a href="#foods">Food</a>
+        <a href="#orders">Orders</a>
+        <button class="btn" id="logoutButton">Logout</button>
+    </div>
+</nav>
+
+<main class="admin-container">
+
+    <section id="dashboard">
+        <h2 class="section-title">Dashboard Overview</h2>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3>Total Sales</h3>
+                <h2 id="totalSales">₹0</h2>
+            </div>
+
+            <div class="stat-card">
+                <h3>Successful Payments</h3>
+                <h2 id="successfulPayments">0</h2>
+            </div>
+
+            <div class="stat-card">
+                <h3>Total Orders</h3>
+                <h2 id="totalOrders">0</h2>
+            </div>
+
+            <div class="stat-card">
+                <h3>Food Items</h3>
+                <h2 id="totalFoods">0</h2>
+            </div>
+        </div>
+
+        <div class="admin-panel">
+            <h3>Daily Sales Report</h3>
+            <canvas id="salesChart"></canvas>
+        </div>
+    </section>
+
+    <section id="foods" class="admin-section">
+        <h2 class="section-title">Food Management</h2>
+
+        <div class="admin-panel">
+            <h3>Add / Edit Food Item</h3>
+
+            <form id="foodForm">
+                <input type="hidden" id="foodId">
+
+                <input type="text" id="foodName"
+                       placeholder="Food name" required>
+
+                <input type="number" id="categoryId"
+                       placeholder="Category ID" min="1" required>
+
+                <textarea id="description"
+                          placeholder="Food description"></textarea>
+
+                <input type="number" id="price"
+                       placeholder="Price" min="0.01"
+                       step="0.01" required>
+
+                <input type="text" id="imageUrl"
+                       placeholder="Image URL">
+
+                <select id="availability">
+                    <option value="1">Available</option>
+                    <option value="0">Unavailable</option>
+                </select>
+
+                <button type="submit" class="btn">
+                    Save Food
+                </button>
+
+                <button type="button" class="btn"
+                        id="clearFormButton">
+                    Clear
+                </button>
+            </form>
+
+            <p id="foodMessage"></p>
+        </div>
+
+        <div class="admin-panel">
+            <h3>Food Items</h3>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Food</th>
+                            <th>Price</th>
+                            <th>Availability</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="foodTable"></tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section id="orders" class="admin-section">
+        <h2 class="section-title">Order Management</h2>
+
+        <div class="admin-panel">
+            <h3>Student Orders</h3>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Order ID</th>
+                            <th>Student</th>
+                            <th>Amount</th>
+                            <th>Payment</th>
+                            <th>Status</th>
+                            <th>Update</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="orderTable"></tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer>Smart Canteen Management System | Admin Panel</footer>
+
+<script src="js/admin.js"></script>
+</body>
+</html>

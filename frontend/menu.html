@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Menu</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">🍽 Smart Canteen</div>
+    <div>
+        <a href="menu.html">Menu</a>
+        <a href="cart.html">My Cart</a>
+        <a href="orders.html">My Orders</a>
+        <a href="#" id="logoutButton">Logout</a>
+    </div>
+</nav>
+
+<section class="container">
+    <h2 class="section-title">Explore Our Food Menu</h2>
+
+    <div class="menu-tools">
+        <input
+            type="text"
+            id="searchInput"
+            class="search-box"
+            placeholder="Search food..."
+        >
+
+        <select id="categorySelect">
+            <option value="">All Categories</option>
+        </select>
+    </div>
+
+    <p id="menuMessage"></p>
+    <div class="food-grid" id="foodContainer"></div>
+</section>
+
+<footer>
+    Smart Canteen Management System
+</footer>
+
+<script src="js/menu.js"></script>
+
+</body>
+</html>

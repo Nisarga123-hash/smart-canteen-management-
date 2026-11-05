@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Login</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">🍽 Smart Canteen</div>
+    <a href="index.html">Home</a>
+</nav>
+
+<div class="auth-container">
+    <h2>Student Login</h2>
+
+    <form id="loginForm">
+        <input type="email" id="loginEmail"
+               placeholder="Email address" required>
+
+        <input type="password" id="loginPassword"
+               placeholder="Password" required>
+
+        <button class="btn" type="submit">Login</button>
+    </form>
+
+    <p id="loginMessage"></p>
+</div>
+
+<div class="auth-container" id="register">
+    <h2>Create Account</h2>
+
+    <form id="registerForm">
+        <input type="text" id="registerName"
+               placeholder="Full name" required>
+
+        <input type="email" id="registerEmail"
+               placeholder="Email address" required>
+
+        <input type="text" id="registerPhone"
+               placeholder="Phone number">
+
+        <input type="password" id="registerPassword"
+               placeholder="Password (minimum 8 characters)"
+               minlength="8" required>
+
+        <button class="btn" type="submit">Register</button>
+    </form>
+
+    <p id="registerMessage"></p>
+</div>
+
+<script src="js/auth.js"></script>
+
+</body>
+</html>

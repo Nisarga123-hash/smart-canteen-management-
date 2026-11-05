@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login - Smart Canteen</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">🍽 Smart Canteen Admin</div>
+    <a href="index.html">Student Website</a>
+</nav>
+
+<div class="auth-container">
+    <h2>Administrator Login</h2>
+
+    <form id="adminLoginForm">
+        <input type="email" id="email"
+               placeholder="Admin email" required>
+
+        <input type="password" id="password"
+               placeholder="Admin password" required>
+
+        <button type="submit" class="btn">Login</button>
+    </form>
+
+    <p id="message"></p>
+</div>
+
+<script src="js/admin-login.js"></script>
+</body>
+</html>

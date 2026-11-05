@@ -1,0 +1,110 @@
+.admin-container {
+    width: 90%;
+    max-width: 1300px;
+    margin: 35px auto;
+}
+
+.admin-section {
+    margin-top: 50px;
+    scroll-margin-top: 25px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.stat-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px #00000010;
+    border-left: 5px solid #347a50;
+}
+
+.stat-card h3 {
+    color: #666;
+    font-size: 15px;
+}
+
+.stat-card h2 {
+    color: #18392b;
+    margin-top: 12px;
+}
+
+.admin-panel {
+    background: white;
+    padding: 25px;
+    margin-top: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px #00000010;
+}
+
+.admin-panel h3 {
+    color: #18392b;
+    margin-bottom: 18px;
+}
+
+.admin-panel input,
+.admin-panel select,
+.admin-panel textarea {
+    width: 100%;
+    padding: 11px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 650px;
+}
+
+th, td {
+    padding: 13px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+th {
+    background: #18392b;
+    color: white;
+}
+
+td button {
+    padding: 7px 10px;
+    margin: 3px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.edit-btn {
+    background: #e3f0ff;
+    color: #145da0;
+}
+
+.disable-btn {
+    background: #ffe5e5;
+    color: #b42318;
+}
+
+#salesChart {
+    max-height: 350px;
+}
+
+@media(max-width: 600px) {
+    .admin-container {
+        width: 94%;
+    }
+
+    .admin-panel {
+        padding: 15px;
+    }
+}
